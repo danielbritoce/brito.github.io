@@ -1,0 +1,268 @@
+@import "reset.css";
+
+body {
+    font-family: 'Heebo', sans-serif;
+    color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: flex-start;
+}
+section { 
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    
+}
+header {
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    
+}
+header p {
+    font-family: 'Bebas Neue', cursive;
+    font-style: normal;
+    font-size: 720px;
+    letter-spacing: -0.035em;
+    text-align: left;
+    display: block;
+    margin-top: 48px;
+    margin-left: -29px;
+    line-height: 0.62;
+    
+}
+
+.pontowork {
+    font-family: Heebo;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: -0.035em;
+    color: rgba(0, 0, 0, 0.1);
+    
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 5vh;
+    color: rgba(0, 0, 0, 0.5);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 164%;  
+}
+
+article{
+    max-width: 380px;
+ 
+}
+
+header p span:hover {
+    cursor: pointer;
+    animation: color-brito 300ms ease-out forwards;
+} 
+
+@keyframes color-brito {
+    0% {
+        color:#0047FF;
+
+    }
+    20% {
+        color:#1F5EFF;
+
+    }
+    50% {
+        color:#3A71FF;
+
+    }
+    100% {
+        color:#0047FF;
+
+    }
+}
+
+li {
+    display: inline-block;
+    margin-left: 32px;
+    font-weight: 700;
+    
+
+    
+}
+a {
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    padding-bottom: 2px;
+    background: linear-gradient(to right, rgba(0,0,0, 0.5) 0%, rgba(0,0,0, 0.5) 100%);
+    background-size: 1px 3px;
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    cursor: pointer;
+}
+
+a:hover{
+    color:#0047FF;
+    background: linear-gradient(to right, rgba(0,71,255, 1) 0%, rgba(0,71,255, 1) 100%);
+    background-size: 1px 4px;
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    
+}
+
+b {
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.9);
+}
+b:hover {
+    color:#0047FF;
+    cursor: pointer;
+}
+
+
+img {
+    width: 450px;
+    height: 450px;
+    
+}
+
+.grafico,.ilustra,.brito{
+    position: absolute;
+    top: 25vh;
+    right: 5vw;
+    display:none;
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.69, 0.01, 0.58, 1), 
+                transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    
+}
+
+.mostrar {
+    display: inline;
+    
+        
+}
+
+.animar{
+    transform: rotate(8deg);
+    
+}
+.fadein {
+    opacity: 1;
+}
+.fadeout {
+    opacity: 0;
+}
+
+/*Breakpoints*/
+@media screen and (max-width:1200px) {
+
+    header p {
+
+        font-size: 550px;
+        margin-top: 40px;
+        margin-left: -20px; 
+    }
+
+}
+
+@media screen and (max-width:992px) {
+
+    header p {
+
+        font-size: 500px;
+        margin-top: 32px;
+        margin-left: -18px; 
+    }
+    img {
+        width: 400px;
+        height: 400px;
+        
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    header p {
+
+        font-size: 420px;
+        margin-top: 32px;
+        margin-left: -14px; 
+    }
+    .conteudo {
+        
+        height: 25vh;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 3vh;
+        
+    }
+    li {
+        margin-right: 24px;
+        margin-left: 0;
+    }
+    section {
+        align-items: flex-end;
+    }
+
+    img {
+        width: 350px;
+        height: 350px;
+        
+    }
+    .grafico,.ilustra,.brito{
+        top:20vh;
+        right: 20vw;
+    }
+    
+}
+@media screen and (max-width:480px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    span {
+        flex: 0 0 auto;
+        
+    }
+
+    header p {
+        font-size: 530px;
+        margin-top: 24px;
+        margin-left: -19px; 
+    }
+    .conteudo {
+        width: 80vw;
+        height: 20vh;
+        align-items: flex-start;
+        margin-bottom: 5vh;
+        
+    }
+    
+    section {
+        margin: 0 16px 0 16px;
+        align-items: flex-start;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+        
+    }
+    .grafico,.ilustra,.brito{
+        top:20vh;
+        right: 0;
+        left: 15vw;
+
+    }
+    
+}
